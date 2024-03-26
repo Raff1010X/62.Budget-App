@@ -11,8 +11,7 @@ class Category:
         self.ledger = []
 
     def __str__(self):
-        asterix = '*' * ((30 - len(self.category)) // 2)
-        title =  (asterix + self.category + asterix + '*')[:30]
+        title =  self.category.center(30, "*")
         items = ''
         for item in self.ledger:
             description = f'\n{item["description"][:23]}'
